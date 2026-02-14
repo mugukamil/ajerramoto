@@ -22,16 +22,29 @@
         <a href="#contacts" class="nav-link">Контакты</a>
       </nav>
       <div class="header-actions">
-        <button class="icon-btn" aria-label="Поиск">
+        <button class="icon-btn icon-btn-phone" aria-label="Телефон">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <circle cx="7" cy="7" r="5.5" stroke="#999" stroke-width="1.5"/>
-            <path d="M11 11L14 14" stroke="#999" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M14 11.5V13C14 13.5523 13.5523 14 13 14H12.5C6.14873 14 1 8.85127 1 2.5V2C1 1.44772 1.44772 1 2 1H3.5C3.77614 1 4 1.22386 4 1.5C4 2.5 4.2 3.5 4.5 4.5L3 6C4 8 5.5 9.5 7.5 10.5L9 9C10 9.3 11 9.5 12 9.5C12.2761 9.5 12.5 9.72386 12.5 10V11.5H14Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
-        <button class="icon-btn" aria-label="Телефон">
+        <button class="icon-btn icon-btn-search" aria-label="Поиск">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M14 11.5V13C14 13.5523 13.5523 14 13 14H12.5C6.14873 14 1 8.85127 1 2.5V2C1 1.44772 1.44772 1 2 1H3.5C3.77614 1 4 1.22386 4 1.5C4 2.5 4.2 3.5 4.5 4.5L3 6C4 8 5.5 9.5 7.5 10.5L9 9C10 9.3 11 9.5 12 9.5C12.2761 9.5 12.5 9.72386 12.5 10V11.5H14Z" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M11 11L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
+        </button>
+        <button class="icon-btn icon-btn-menu" aria-label="Меню">
+          <svg width="16" height="7" viewBox="0 0 16 7" fill="none">
+            <line x1="0" y1="0.5" x2="16" y2="0.5" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="0" y1="6.5" x2="16" y2="6.5" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </button>
+        <button class="icon-btn icon-btn-cart" aria-label="Корзина">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M5 5H6.5V4.5C6.5 3.67 7.17 3 8 3C8.83 3 9.5 3.67 9.5 4.5V5H11L12 14H4L5 5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M8 3V1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span class="cart-badge">12</span>
         </button>
       </div>
     </header>
@@ -240,6 +253,12 @@
         <div class="parts-row">
           <div class="section-header dark">
             <h2 class="section-title light">Популярное</h2>
+            <a href="#" class="view-all-mobile">
+              <span>посмотреть все</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
           </div>
           <div class="parts-nav">
             <button class="nav-arrow dark prev" aria-label="Предыдущий">
@@ -340,10 +359,10 @@
         <div class="parts-row">
           <div class="section-header dark">
             <h2 class="section-title light">Новинки</h2>
-            <a href="#" class="view-all">
-              посмотреть все
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <a href="#" class="view-all-mobile">
+              <span>посмотреть все</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
           </div>
@@ -624,17 +643,21 @@
           <a href="#" class="footer-logo">AJERRA</a>
         </div>
         <div class="footer-nav">
-          <div class="footer-col">
+          <div class="footer-col catalog-col">
             <h4>Каталог</h4>
-            <ul>
-              <li><a href="#">Мотоэкипировка</a></li>
-              <li><a href="#">Защита</a></li>
-              <li><a href="#">Мотоаксессуары</a></li>
-              <li><a href="#">Расходники и запчасти</a></li>
-              <li><a href="#">Тюнинг</a></li>
-              <li><a href="#">Комплекты</a></li>
-              <li><a href="#">Повседневная одежда и обувь</a></li>
-            </ul>
+            <div class="catalog-grid">
+              <ul>
+                <li><a href="#">Мотоэкипировка</a></li>
+                <li><a href="#">Защита</a></li>
+                <li><a href="#">Мотоаксессуары</a></li>
+                <li><a href="#">Расходники и запчасти</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">Тюнинг</a></li>
+                <li><a href="#">Комплекты</a></li>
+                <li><a href="#">Повседневная одежда и обувь</a></li>
+              </ul>
+            </div>
           </div>
           <div class="footer-col">
             <h4>Компания</h4>

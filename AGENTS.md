@@ -4,7 +4,7 @@ Guidelines for AI coding agents working in this repository.
 
 ## Project Overview
 
-AJERRA is a static website for an enduro motorcycle company. Built with vanilla HTML5 and CSS3. No build system or JavaScript framework currently in use.
+AJERRA is a website for an enduro motorcycle company. Built with PHP, HTML5, and CSS3. Uses PHP includes for header/footer. No build system or JavaScript framework currently in use.
 
 ## Development Commands
 
@@ -15,14 +15,14 @@ AJERRA is a static website for an enduro motorcycle company. Built with vanilla 
 npx serve .
 # or
 python -m http.server 8000
-# or open index.html directly in browser
+# or open index.php directly in browser
 ```
 
 ### Linting (Recommended Setup)
 
 ```bash
 # HTML validation
-npx html-validate index.html
+npx html-validate index.php
 
 # CSS linting
 npx stylelint "src/styles/**/*.css"
@@ -34,11 +34,25 @@ npm run lint
 ### Testing
 
 No automated tests currently. Manual testing:
-- Open index.html in browser
+- Open index.php in browser
 - Test responsive breakpoints: 768px, 1200px, 1400px, 1600px
 - Verify all links and images load correctly
 
 ## Code Style Guidelines
+
+### PHP
+
+- Pages use `.php` extension (index.php, category.php, product.php, cart.php, order.php)
+- Header/footer included via `includes/header-*.php` and `includes/footer.php`
+- Start local server with: `php -S localhost:1337`
+
+### Header
+
+- Fixed header, 90px height (`--header-height: 90px`)
+- **index.php**: Header transparent, adds `.scrolled` class on scroll (dark background)
+- **Inner pages**: Use `.page-with-header` class for 90px padding-top to account for fixed header
+- **Search dropdown**: Click search icon toggles dropdown; submit button shows when input has value
+- JavaScript for search is in `includes/footer.php`, scroll effect JS is in `index.php`
 
 ### HTML
 
@@ -66,6 +80,30 @@ No automated tests currently. Manual testing:
   </svg>
 </button>
 ```
+
+**SVG Icons:**
+- Use inline SVGs for all icons (cart, arrows, decorative elements)
+- For navigation arrows (prev/next), reuse the same SVG and flip with CSS:
+  ```html
+  <button class="nav-arrow prev">
+    <img src="arrow.svg" style="transform: scaleX(-1)">
+  </button>
+  <button class="nav-arrow next">
+    <img src="arrow.svg">
+  </button>
+  ```
+- Cart icon SVG (14x14 for small, 18x18 for regular):
+  ```html
+  <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  ```
 
 ### CSS
 
@@ -179,7 +217,16 @@ Update `--container-padding` inside media queries:
 
 ```
 /
-├── index.html              # Main HTML file
+├── index.php               # Main landing page
+├── category.php            # Category/catalog page
+├── product.php             # Product detail page
+├── cart.php                # Cart page
+├── order.php               # Checkout page
+├── order-success.php       # Order confirmation
+├── includes/
+│   ├── header-home.php     # Light header for landing page
+│   ├── header-page.php     # Dark header for other pages
+│   └── footer.php          # Shared footer
 ├── src/
 │   └── styles/
 │       └── main.css        # Primary stylesheet
@@ -261,9 +308,19 @@ Update `--container-padding` inside media queries:
 }
 ```
 
+## Plan Mode
+
+- Make the plan extremely concise. Sacrifice grammar for the sake of concision.
+- At the end of each plan, give a list of unresolved questions to answer, if any.
+
 ## Notes
 
 - Content is in Russian; maintain Russian for new content
 - This is a marketing/e-commerce website, not a web application
 - No JavaScript currently; if adding JS, consider vanilla JS first
 - Maintain the existing visual design language when making changes
+
+## Documentation Maintenance
+
+- After implementing significant changes (new patterns, architecture decisions, component behavior), update both AGENTS.md and CLAUDE.md with relevant information
+- This ensures future AI sessions have accurate context about the codebase

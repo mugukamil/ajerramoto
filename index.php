@@ -688,7 +688,8 @@
         <div class="about-content">
           <div class="about-image-wrapper">
             <div class="about-image">
-              <img src="public/assets/ajerra.png" alt="AJERRA Team">
+              <img src="public/assets/ajerra.png" alt="AJERRA Team" class="desktop-img">
+              <img src="public/assets/ajerra-mob.png" alt="AJERRA Team" class="mobile-img">
             </div>
           </div>
           <div class="about-text">

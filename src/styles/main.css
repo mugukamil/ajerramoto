@@ -856,6 +856,14 @@ ul {
   object-fit: contain;
 }
 
+.about-image .desktop-img {
+  display: block;
+}
+
+.about-image .mobile-img {
+  display: none;
+}
+
 .about-text {
   position: relative;
   flex: 0 0 655px;
@@ -1675,9 +1683,22 @@ ul {
     margin-top: 24px;
   }
 
+  .parts-carousel {
+    position: relative;
+    padding: 0 28px;
+  }
+
   .parts-carousel .carousel-prev,
   .parts-carousel .carousel-next {
-    display: none;
+    display: flex;
+  }
+
+  .parts-carousel .carousel-prev {
+    left: -16px;
+  }
+
+  .parts-carousel .carousel-next {
+    right: -16px;
   }
 
   .nav-arrow {
@@ -1686,15 +1707,11 @@ ul {
   }
 
   .parts-swiper .swiper-slide {
-    width: 100%;
-    max-width: 312px;
+    width: 100% !important;
   }
 
   .part-card {
-    width: 312px;
-    max-width: 312px;
-    flex-shrink: 0;
-    margin: 0 auto;
+    width: 100%;
   }
 
   .part-image {
@@ -1743,9 +1760,8 @@ ul {
 
   .about-image-wrapper {
     flex: none;
-    width: calc(100% + 40px);
+    height: auto;
     max-width: none;
-    height: 372px;
     margin-left: -20px;
     margin-right: -20px;
   }
@@ -1754,12 +1770,19 @@ ul {
     width: 100%;
   }
 
+  .about-image .desktop-img {
+    display: none;
+  }
+
+  .about-image .mobile-img {
+    display: block;
+  }
+
   .about-text {
     background: var(--color-card);
-    padding: 30px 0 48px;
-    max-width: 100%;
+    padding: 30px 24px 48px;
+    margin-inline: -20px;
     margin-top: 0;
-    margin-left: 0;
   }
 
   .about-title {
@@ -1813,6 +1836,7 @@ ul {
 
   .contacts-grid {
     flex-direction: column;
+    margin-inline: -20px;
   }
 
   .store-list {

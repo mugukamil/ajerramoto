@@ -672,7 +672,7 @@
     padding: 20px;
     border-radius: 0;
     box-shadow: none;
-    background: transparent;
+    margin-inline: -20px;
   }
 
   .product-gallery {
@@ -804,6 +804,34 @@
 
   .similar-title::before {
     display: none;
+  }
+
+  .similar-carousel {
+    position: relative;
+    padding: 0 28px;
+  }
+
+  .similar-carousel .nav-arrow {
+    width: 36px;
+    height: 36px;
+    display: flex;
+  }
+
+  .similar-carousel .nav-arrow svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .similar-carousel .carousel-prev {
+    left: -16px;
+  }
+
+  .similar-carousel .carousel-next {
+    right: -16px;
+  }
+
+  .similar-swiper .swiper-slide {
+    width: 100% !important;
   }
 
   .similar-nav .nav-arrow {

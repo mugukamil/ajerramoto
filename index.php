@@ -95,13 +95,13 @@
             <path d="M50.6667 32H13.3333" stroke="white" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M32 13.3333L13.3333 32L32 50.6667" stroke="white" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-                    </a>
+        </button>
         <button class="nav-arrow next swiper-button-next-hero" aria-label="Следующий">
           <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
             <path d="M13.3333 32H50.6667" stroke="white" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M32 13.3333L50.6667 32L32 50.6667" stroke="white" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-                    </a>
+        </button>
       </div>
     </section>
 
@@ -491,7 +491,7 @@
             </div>
             <button class="nav-arrow dark carousel-next swiper-button-next-popular" aria-label="Следующий">
               <img src="public/assets/40d1d1338cfbab8ddf4ad4dcfe5360adb5cfb97c.svg" alt="" width="24" height="24">
-                        </a>
+            </button>
           </div>
         </div>
 
@@ -676,7 +676,7 @@
             </div>
             <button class="nav-arrow dark carousel-next swiper-button-next-new" aria-label="Следующий">
               <img src="public/assets/40d1d1338cfbab8ddf4ad4dcfe5360adb5cfb97c.svg" alt="" width="24" height="24">
-                        </a>
+            </button>
           </div>
         </div>
       </div>

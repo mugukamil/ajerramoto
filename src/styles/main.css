@@ -285,7 +285,7 @@ ul {
 .search-dropdown {
   position: absolute;
   top: 100%;
-  right: var(--container-padding);
+  right: 0;
   width: 320px;
   background: var(--color-card);
   border-radius: var(--radius-sm);
@@ -536,6 +536,7 @@ ul {
 }
 
 .product-image {
+  position: relative;
   height: 300px;
   overflow: hidden;
 }
@@ -544,6 +545,23 @@ ul {
   width: 100%;
   object-fit: cover;
   transition: transform var(--transition-base);
+}
+
+.product-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 4px 12px;
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+}
+
+.product-badge.wide {
+  padding: 4px 16px;
 }
 
 .product-info {
@@ -911,6 +929,7 @@ ul {
 }
 
 .city-select {
+  position: relative;
   display: flex;
   align-items: center;
   gap: var(--space-md);
@@ -920,6 +939,60 @@ ul {
   font-size: 14px;
   font-weight: 500;
   color: var(--color-text-dim);
+  cursor: pointer;
+  user-select: none;
+}
+
+.city-select img {
+  transition: transform var(--transition-fast);
+}
+
+.city-select.open img {
+  transform: rotate(180deg);
+}
+
+.city-dropdown {
+  position: absolute;
+  top: calc(100% + var(--space-sm));
+  left: 0;
+  min-width: 100%;
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.city-select.open .city-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.city-dropdown-item {
+  padding: var(--space-md) var(--space-lg);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.city-dropdown-item:hover {
+  background: var(--color-bg);
+  color: var(--color-primary-dark);
+}
+
+.city-dropdown-item:first-child {
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.city-dropdown-item:last-child {
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
 }
 
 .contacts-info {

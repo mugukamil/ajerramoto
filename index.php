@@ -718,8 +718,13 @@
       <div class="container">
         <div class="contacts-header">
           <div class="city-select">
-            <span>Выберите город</span>
+            <span class="city-select-text">Выберите город</span>
             <img src="public/assets/c230e64e2fc8f783afe01e41d1f7b08d6ec283fb.svg" alt="" width="16" height="16">
+            <div class="city-dropdown">
+              <div class="city-dropdown-item" data-city="Москва">Москва</div>
+              <div class="city-dropdown-item" data-city="Махачкала">Махачкала</div>
+              <div class="city-dropdown-item" data-city="Санкт-Петербург">Санкт-Петербург</div>
+            </div>
           </div>
           <div class="contacts-info">
             <div class="contact-item">
@@ -1012,6 +1017,28 @@
           spaceBetween: 30,
         },
       },
+    });
+
+    // City dropdown
+    const citySelect = document.querySelector('.city-select');
+    const citySelectText = document.querySelector('.city-select-text');
+    const cityDropdownItems = document.querySelectorAll('.city-dropdown-item');
+
+    citySelect.addEventListener('click', (e) => {
+      e.stopPropagation();
+      citySelect.classList.toggle('open');
+    });
+
+    cityDropdownItems.forEach(item => {
+      item.addEventListener('click', (e) => {
+        e.stopPropagation();
+        citySelectText.textContent = item.dataset.city;
+        citySelect.classList.remove('open');
+      });
+    });
+
+    document.addEventListener('click', () => {
+      citySelect.classList.remove('open');
     });
   </script>
 </body>

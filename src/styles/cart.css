@@ -3,41 +3,13 @@
    ============================================ */
 
 .cart-section {
-  padding-top: 80px;
+  padding-top: 20px;
   padding-bottom: var(--space-4xl);
 }
 
-/* Breadcrumbs */
+/* Breadcrumbs - page-specific adjustments */
 .breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   margin-bottom: 12px;
-}
-
-.breadcrumb-link {
-  font-size: 14px;
-  color: #777;
-  transition: color var(--transition-fast);
-}
-
-.breadcrumb-link:hover {
-  color: var(--color-text);
-}
-
-.breadcrumb-current {
-  font-size: 14px;
-  color: var(--color-text);
-}
-
-.breadcrumb-arrow {
-  opacity: 0.5;
-}
-
-.breadcrumb-divider {
-  height: 1px;
-  background: #E5E5E5;
-  margin-bottom: var(--space-xl);
 }
 
 /* Cart Content Layout */
@@ -74,6 +46,7 @@
   align-items: flex-start;
   gap: 16px;
   padding: var(--space-lg) 0;
+  border-bottom: 1px solid #E5E5E5;
 }
 
 .cart-item:first-child {
@@ -111,6 +84,7 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  margin-left: auto;
 }
 
 .counter {
@@ -209,22 +183,9 @@
   gap: 12px;
 }
 
-.summary-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.summary-label {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--color-text);
-}
+/* summary-row, summary-label, summary-total - now in main.css */
 
 .summary-total {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--color-text);
   text-align: right;
 }
 
@@ -321,24 +282,26 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 16px;
+    position: sticky;
+    bottom: 1rem;
   }
 
   .summary-row {
     flex: 1;
+    justify-content: flex-start;
+    gap: 16px;
   }
 
   .btn-one-click,
   .btn-checkout {
     width: auto;
-    flex: 1;
     min-width: 200px;
   }
 }
 
 @media (max-width: 768px) {
   .cart-section {
-    padding-top: 70px;
-    padding-bottom: var(--space-3xl);
+    padding-bottom: var(--space-2xl);
   }
 
   .cart-content {
@@ -373,7 +336,6 @@
   .cart-item-counter {
     width: 100%;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     margin-top: var(--space-sm);
   }

@@ -58,23 +58,25 @@
 <!-- Mobile Menu Panel -->
 <nav class="mobile-menu" id="mobile-menu">
   <div class="mobile-menu-content">
-    <div class="mobile-menu-section">
-      <a href="#models" class="mobile-menu-link">Модели</a>
-      <a href="#parts" class="mobile-menu-link">Запчасти</a>
+    <a href="#models" class="mobile-menu-link">Модели</a>
+    <div class="mobile-menu-item">
+      <button class="mobile-menu-link mobile-menu-toggle" aria-expanded="false">
+        Запчасти
+        <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <svg class="chevron-up" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+      </button>
+      <div class="mobile-menu-subcategories">
+        <a href="#" class="mobile-menu-sublink">Мотоциклы</a>
+        <a href="#" class="mobile-menu-sublink">Экипировка</a>
+        <a href="#" class="mobile-menu-sublink">Шины</a>
+        <a href="#" class="mobile-menu-sublink">Еще что-то</a>
+        <a href="#" class="mobile-menu-sublink">Тюнинг</a>
+        <a href="#" class="mobile-menu-sublink">Аксессуары</a>
+        <a href="#" class="mobile-menu-sublink">Химия</a>
+      </div>
     </div>
-    <div class="mobile-menu-subcategories">
-      <a href="#" class="mobile-menu-sublink">Мотоциклы</a>
-      <a href="#" class="mobile-menu-sublink">Экипировка</a>
-      <a href="#" class="mobile-menu-sublink">Шины</a>
-      <a href="#" class="mobile-menu-sublink">Еще что-то</a>
-      <a href="#" class="mobile-menu-sublink">Тюнинг</a>
-      <a href="#" class="mobile-menu-sublink">Аксессуары</a>
-      <a href="#" class="mobile-menu-sublink">Химия</a>
-    </div>
-    <div class="mobile-menu-section mobile-menu-section-bottom">
-      <a href="#" class="mobile-menu-link">Туры</a>
-      <a href="#about" class="mobile-menu-link">О нас</a>
-      <a href="#contacts" class="mobile-menu-link">Контакты</a>
-    </div>
+    <a href="#" class="mobile-menu-link">Туры</a>
+    <a href="#about" class="mobile-menu-link">О нас</a>
+    <a href="#contacts" class="mobile-menu-link">Контакты</a>
   </div>
 </nav>

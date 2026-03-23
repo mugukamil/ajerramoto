@@ -13,6 +13,97 @@
 <body>
   <div class="page">
     <?php include 'includes/header-home.php'; ?>
+<?php
+$products = [
+  [
+    'name' => 'AJERRA S8 RL300',
+    'desc' => 'Полноразмерный мотоцикл для продвинутых райдеров.',
+    'image' => 'public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png',
+    'price_current' => '100 000 ₽',
+    'price_old' => '140 000 ₽'
+  ],
+  [
+    'name' => 'AJERRA S8 RL300',
+    'desc' => 'Полноразмерный мотоцикл для продвинутых райдеров.',
+    'image' => 'public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png',
+    'price_current' => '100 000 ₽',
+    'price_old' => '140 000 ₽'
+  ],
+  [
+    'name' => 'AJERRA S8 RL300',
+    'desc' => 'Полноразмерный мотоцикл для продвинутых райдеров.',
+    'image' => 'public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png',
+    'price_current' => '100 000 ₽',
+    'price_old' => '140 000 ₽'
+  ],
+  [
+    'name' => 'AJERRA S8 RL300',
+    'desc' => 'Полноразмерный мотоцикл для продвинутых райдеров.',
+    'image' => 'public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png',
+    'price_current' => '100 000 ₽',
+    'price_old' => '140 000 ₽'
+  ],
+  [
+    'name' => 'AJERRA S8 RL300',
+    'desc' => 'Полноразмерный мотоцикл для продвинутых райдеров.',
+    'image' => 'public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png',
+    'price_current' => '100 000 ₽',
+    'price_old' => '140 000 ₽'
+  ],
+  [
+    'name' => 'AJERRA S8 RL300',
+    'desc' => 'Полноразмерный мотоцикл для продвинутых райдеров.',
+    'image' => 'public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png',
+    'price_current' => '100 000 ₽',
+    'price_old' => '140 000 ₽'
+  ]
+];
+
+$parts = [
+  [
+    'name' => 'Колеса для мотоцикла',
+    'image' => 'public/assets/7f4faf99484044ddb1e782958a41cad904e93297.png',
+    'badge' => 'шины',
+    'badge_wide' => false,
+    'price' => '100 000 ₽'
+  ],
+  [
+    'name' => 'Аккумулятор EXIDE',
+    'image' => 'public/assets/babc1deb46178ba007ecd52b6844574e4d5022d4.png',
+    'badge' => 'аккумуляторы',
+    'badge_wide' => true,
+    'price' => '100 000 ₽'
+  ],
+  [
+    'name' => 'Аккумулятор EXIDE',
+    'image' => 'public/assets/0196eaee1d21f9868a5371414a7337a0f478490a.png',
+    'badge' => 'аккумуляторы',
+    'badge_wide' => true,
+    'price' => '100 000 ₽'
+  ],
+  [
+    'name' => 'Масло Motul 510 2T',
+    'image' => 'public/assets/8bfe66051b94080dd8cc17c697f3909bbbc51575.png',
+    'badge' => 'масла',
+    'badge_wide' => false,
+    'price' => '100 000 ₽'
+  ],
+  [
+    'name' => 'Колеса для мотоцикла',
+    'image' => 'public/assets/7f4faf99484044ddb1e782958a41cad904e93297.png',
+    'badge' => 'шины',
+    'badge_wide' => false,
+    'price' => '100 000 ₽'
+  ],
+  [
+    'name' => 'Аккумулятор EXIDE',
+    'image' => 'public/assets/babc1deb46178ba007ecd52b6844574e4d5022d4.png',
+    'badge' => 'аккумуляторы',
+    'badge_wide' => true,
+    'price' => '100 000 ₽'
+  ]
+];
+?>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -89,17 +180,18 @@
           </div>
         </div>
       </div>
+      <!-- Hero Navigation Arrows -->
       <div class="hero-nav">
         <button class="nav-arrow prev swiper-button-prev-hero" aria-label="Предыдущий">
-          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
-            <path d="M50.6667 32H13.3333" stroke="white" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M32 13.3333L13.3333 32L32 50.6667" stroke="white" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <path d="M28.5 18H7.5" stroke="white" stroke-width="1.625" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 7.5L7.5 18L18 28.5" stroke="white" stroke-width="1.625" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
         <button class="nav-arrow next swiper-button-next-hero" aria-label="Следующий">
-          <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
-            <path d="M13.3333 32H50.6667" stroke="white" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M32 13.3333L50.6667 32L32 50.6667" stroke="white" stroke-width="2.91667" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <path d="M7.5 18H28.5" stroke="white" stroke-width="1.625" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 7.5L28.5 18L18 28.5" stroke="white" stroke-width="1.625" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
       </div>
@@ -115,18 +207,19 @@
           </svg>
         </div>
         <div class="products-grid">
+<?php foreach ($products as $product): ?>
         <article class="product-card">
           <a href="product.php" class="product-image">
-            <img src="public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png" alt="AJERRA S8 RL300">
+            <img src="<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>">
           </a>
           <div class="product-info">
-            <h3 class="product-name"><a href="product.php">AJERRA S8 RL300</a></h3>
-            <p class="product-desc">Полноразмерный мотоцикл для продвинутых райдеров.</p>
+            <h3 class="product-name"><a href="product.php"><?php echo $product['name']; ?></a></h3>
+            <p class="product-desc"><?php echo $product['desc']; ?></p>
             <div class="product-divider"></div>
             <div class="product-footer">
               <div class="product-price">
-                <span class="price-current">100 000 ₽</span>
-                <span class="price-old">140 000 ₽</span>
+                <span class="price-current"><?php echo $product['price_current']; ?></span>
+                <span class="price-old"><?php echo $product['price_old']; ?></span>
               </div>
               <a href="cart.php" class="add-to-cart">
                 <span class="cart-text">В КОРЗИНУ</span>
@@ -145,169 +238,13 @@
             </div>
           </div>
         </article>
-
-        <article class="product-card">
-          <a href="product.php" class="product-image">
-            <img src="public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png" alt="AJERRA S8 RL300">
-          </a>
-          <div class="product-info">
-            <h3 class="product-name"><a href="product.php">AJERRA S8 RL300</a></h3>
-            <p class="product-desc">Полноразмерный мотоцикл для продвинутых райдеров.</p>
-            <div class="product-divider"></div>
-            <div class="product-footer">
-              <div class="product-price">
-                <span class="price-current">100 000 ₽</span>
-                <span class="price-old">140 000 ₽</span>
-              </div>
-              <a href="cart.php" class="add-to-cart">
-                <span class="cart-text">В КОРЗИНУ</span>
-                <span class="cart-icon">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <a href="product.php" class="product-image">
-            <img src="public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png" alt="AJERRA S8 RL300">
-          </a>
-          <div class="product-info">
-            <h3 class="product-name"><a href="product.php">AJERRA S8 RL300</a></h3>
-            <p class="product-desc">Полноразмерный мотоцикл для продвинутых райдеров.</p>
-            <div class="product-divider"></div>
-            <div class="product-footer">
-              <div class="product-price">
-                <span class="price-current">100 000 ₽</span>
-                <span class="price-old">140 000 ₽</span>
-              </div>
-              <a href="cart.php" class="add-to-cart">
-                <span class="cart-text">В КОРЗИНУ</span>
-                <span class="cart-icon">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <a href="product.php" class="product-image">
-            <img src="public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png" alt="AJERRA S8 RL300">
-          </a>
-          <div class="product-info">
-            <h3 class="product-name"><a href="product.php">AJERRA S8 RL300</a></h3>
-            <p class="product-desc">Полноразмерный мотоцикл для продвинутых райдеров.</p>
-            <div class="product-divider"></div>
-            <div class="product-footer">
-              <div class="product-price">
-                <span class="price-current">100 000 ₽</span>
-                <span class="price-old">140 000 ₽</span>
-              </div>
-              <a href="cart.php" class="add-to-cart">
-                <span class="cart-text">В КОРЗИНУ</span>
-                <span class="cart-icon">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <a href="product.php" class="product-image">
-            <img src="public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png" alt="AJERRA S8 RL300">
-          </a>
-          <div class="product-info">
-            <h3 class="product-name"><a href="product.php">AJERRA S8 RL300</a></h3>
-            <p class="product-desc">Полноразмерный мотоцикл для продвинутых райдеров.</p>
-            <div class="product-divider"></div>
-            <div class="product-footer">
-              <div class="product-price">
-                <span class="price-current">100 000 ₽</span>
-                <span class="price-old">140 000 ₽</span>
-              </div>
-              <a href="cart.php" class="add-to-cart">
-                <span class="cart-text">В КОРЗИНУ</span>
-                <span class="cart-icon">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <a href="product.php" class="product-image">
-            <img src="public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png" alt="AJERRA S8 RL300">
-          </a>
-          <div class="product-info">
-            <h3 class="product-name"><a href="product.php">AJERRA S8 RL300</a></h3>
-            <p class="product-desc">Полноразмерный мотоцикл для продвинутых райдеров.</p>
-            <div class="product-divider"></div>
-            <div class="product-footer">
-              <div class="product-price">
-                <span class="price-current">100 000 ₽</span>
-                <span class="price-old">140 000 ₽</span>
-              </div>
-              <a href="cart.php" class="add-to-cart">
-                <span class="cart-text">В КОРЗИНУ</span>
-                <span class="cart-icon">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </article>
-
+<?php endforeach; ?>
         </div>
       </div>
     </section>
 
     <!-- Parts Section -->
     <section id="parts" class="parts-section">
-      <div class="parts-bg"></div>
       <div class="container">
         <div class="parts-content">
         <!-- Popular Parts -->
@@ -325,16 +262,17 @@
             </button>
             <div class="swiper parts-swiper popular-swiper">
               <div class="swiper-wrapper">
+<?php foreach ($parts as $part): ?>
               <div class="swiper-slide">
                 <article class="part-card">
                   <a href="product.php" class="part-image">
-                    <img src="public/assets/7f4faf99484044ddb1e782958a41cad904e93297.png" alt="Колеса для мотоцикла">
-                    <span class="part-badge">шины</span>
+                    <img src="<?php echo $part['image']; ?>" alt="<?php echo $part['name']; ?>">
+                    <span class="part-badge<?php echo $part['badge_wide'] ? ' wide' : ''; ?>"><?php echo $part['badge']; ?></span>
                   </a>
-                  <h3 class="part-name"><a href="product.php">Колеса для мотоцикла</a></h3>
+                  <h3 class="part-name"><a href="product.php"><?php echo $part['name']; ?></a></h3>
                   <div class="part-divider"></div>
                   <div class="part-footer">
-                    <span class="part-price">100 000 ₽</span>
+                    <span class="part-price"><?php echo $part['price']; ?></span>
                     <a href="cart.php" class="add-to-cart small">
                       <span class="cart-text">В КОРЗИНУ</span>
                       <span class="cart-icon">
@@ -352,142 +290,8 @@
                   </div>
                 </article>
               </div>
-              <div class="swiper-slide">
-                <article class="part-card">
-                  <a href="product.php" class="part-image">
-                    <img src="public/assets/babc1deb46178ba007ecd52b6844574e4d5022d4.png" alt="Аккумулятор EXIDE">
-                    <span class="part-badge wide">аккумуляторы</span>
-                  </a>
-                  <h3 class="part-name">Аккумулятор EXIDE</h3>
-                  <div class="part-divider"></div>
-                  <div class="part-footer">
-                    <span class="part-price">100 000 ₽</span>
-                    <a href="cart.php" class="add-to-cart small">
-                      <span class="cart-text">В КОРЗИНУ</span>
-                      <span class="cart-icon">
-                        <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
-                </article>
+<?php endforeach; ?>
               </div>
-              <div class="swiper-slide">
-                <article class="part-card">
-                  <a href="product.php" class="part-image">
-                    <img src="public/assets/0196eaee1d21f9868a5371414a7337a0f478490a.png" alt="Аккумулятор EXIDE">
-                    <span class="part-badge wide">аккумуляторы</span>
-                  </a>
-                  <h3 class="part-name">Аккумулятор EXIDE</h3>
-                  <div class="part-divider"></div>
-                  <div class="part-footer">
-                    <span class="part-price">100 000 ₽</span>
-                    <a href="cart.php" class="add-to-cart small">
-                      <span class="cart-text">В КОРЗИНУ</span>
-                      <span class="cart-icon">
-                        <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
-                </article>
-              </div>
-              <div class="swiper-slide">
-                <article class="part-card">
-                  <a href="product.php" class="part-image">
-                    <img src="public/assets/8bfe66051b94080dd8cc17c697f3909bbbc51575.png" alt="Аккумулятор EXIDE">
-                    <span class="part-badge wide">аккумуляторы</span>
-                  </a>
-                  <h3 class="part-name">Аккумулятор EXIDE</h3>
-                  <div class="part-divider"></div>
-                  <div class="part-footer">
-                    <span class="part-price">100 000 ₽</span>
-                    <a href="cart.php" class="add-to-cart small">
-                      <span class="cart-text">В КОРЗИНУ</span>
-                      <span class="cart-icon">
-                        <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
-                </article>
-              </div>
-              <div class="swiper-slide">
-                <article class="part-card">
-                  <a href="product.php" class="part-image">
-                    <img src="public/assets/8bfe66051b94080dd8cc17c697f3909bbbc51575.png" alt="Аккумулятор EXIDE">
-                    <span class="part-badge wide">аккумуляторы</span>
-                  </a>
-                  <h3 class="part-name">Аккумулятор EXIDE</h3>
-                  <div class="part-divider"></div>
-                  <div class="part-footer">
-                    <span class="part-price">100 000 ₽</span>
-                    <a href="cart.php" class="add-to-cart small">
-                      <span class="cart-text">В КОРЗИНУ</span>
-                      <span class="cart-icon">
-                        <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
-                </article>
-              </div>
-              <div class="swiper-slide">
-                <article class="part-card">
-                  <a href="product.php" class="part-image">
-                    <img src="public/assets/8bfe66051b94080dd8cc17c697f3909bbbc51575.png" alt="Аккумулятор EXIDE">
-                    <span class="part-badge wide">аккумуляторы</span>
-                  </a>
-                  <h3 class="part-name">Аккумулятор EXIDE</h3>
-                  <div class="part-divider"></div>
-                  <div class="part-footer">
-                    <span class="part-price">100 000 ₽</span>
-                    <a href="cart.php" class="add-to-cart small">
-                      <span class="cart-text">В КОРЗИНУ</span>
-                      <span class="cart-icon">
-                        <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
-                </article>
-              </div>
-            </div>
             </div>
             <button class="nav-arrow dark carousel-next swiper-button-next-popular" aria-label="Следующий">
               <img src="public/assets/40d1d1338cfbab8ddf4ad4dcfe5360adb5cfb97c.svg" alt="" width="24" height="24">
@@ -498,7 +302,7 @@
         <!-- New Arrivals -->
         <div class="parts-row">
           <div class="section-header dark">
-            <h2 class="section-title light"><span class="desktop-only">Новинки</span><span class="mobile-only">Новое</span></h2>
+            <h2 class="section-title light"><span>Новинки</span></h2>
             <a href="category.php" class="view-all-mobile">
               <span>посмотреть все</span>
               <img src="public/assets/5f96e96e30e5f2130522614d183dd14941c24536.svg" alt="" width="24" height="24">
@@ -510,16 +314,17 @@
             </button>
             <div class="swiper parts-swiper new-swiper">
               <div class="swiper-wrapper">
+<?php foreach ($parts as $part): ?>
               <div class="swiper-slide">
                 <article class="part-card">
                   <a href="product.php" class="part-image">
-                    <img src="public/assets/7f4faf99484044ddb1e782958a41cad904e93297.png" alt="Колеса для мотоцикла">
-                    <span class="part-badge">шины</span>
+                    <img src="<?php echo $part['image']; ?>" alt="<?php echo $part['name']; ?>">
+                    <span class="part-badge<?php echo $part['badge_wide'] ? ' wide' : ''; ?>"><?php echo $part['badge']; ?></span>
                   </a>
-                  <h3 class="part-name"><a href="product.php">Колеса для мотоцикла</a></h3>
+                  <h3 class="part-name"><a href="product.php"><?php echo $part['name']; ?></a></h3>
                   <div class="part-divider"></div>
                   <div class="part-footer">
-                    <span class="part-price">100 000 ₽</span>
+                    <span class="part-price"><?php echo $part['price']; ?></span>
                     <a href="cart.php" class="add-to-cart small">
                       <span class="cart-text">В КОРЗИНУ</span>
                       <span class="cart-icon">
@@ -537,142 +342,8 @@
                   </div>
                 </article>
               </div>
-              <div class="swiper-slide">
-                <article class="part-card">
-                  <a href="product.php" class="part-image">
-                    <img src="public/assets/babc1deb46178ba007ecd52b6844574e4d5022d4.png" alt="Аккумулятор EXIDE">
-                    <span class="part-badge wide">аккумуляторы</span>
-                  </a>
-                  <h3 class="part-name">Аккумулятор EXIDE</h3>
-                  <div class="part-divider"></div>
-                  <div class="part-footer">
-                    <span class="part-price">100 000 ₽</span>
-                    <a href="cart.php" class="add-to-cart small">
-                      <span class="cart-text">В КОРЗИНУ</span>
-                      <span class="cart-icon">
-                        <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
-                </article>
+<?php endforeach; ?>
               </div>
-              <div class="swiper-slide">
-                <article class="part-card">
-                  <a href="product.php" class="part-image">
-                    <img src="public/assets/0196eaee1d21f9868a5371414a7337a0f478490a.png" alt="Аккумулятор EXIDE">
-                    <span class="part-badge wide">аккумуляторы</span>
-                  </a>
-                  <h3 class="part-name">Аккумулятор EXIDE</h3>
-                  <div class="part-divider"></div>
-                  <div class="part-footer">
-                    <span class="part-price">100 000 ₽</span>
-                    <a href="cart.php" class="add-to-cart small">
-                      <span class="cart-text">В КОРЗИНУ</span>
-                      <span class="cart-icon">
-                        <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
-                </article>
-              </div>
-              <div class="swiper-slide">
-                <article class="part-card">
-                  <a href="product.php" class="part-image">
-                    <img src="public/assets/8bfe66051b94080dd8cc17c697f3909bbbc51575.png" alt="Аккумулятор EXIDE">
-                    <span class="part-badge wide">аккумуляторы</span>
-                  </a>
-                  <h3 class="part-name">Аккумулятор EXIDE</h3>
-                  <div class="part-divider"></div>
-                  <div class="part-footer">
-                    <span class="part-price">100 000 ₽</span>
-                    <a href="cart.php" class="add-to-cart small">
-                      <span class="cart-text">В КОРЗИНУ</span>
-                      <span class="cart-icon">
-                        <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
-                </article>
-              </div>
-              <div class="swiper-slide">
-                <article class="part-card">
-                  <a href="product.php" class="part-image">
-                    <img src="public/assets/8bfe66051b94080dd8cc17c697f3909bbbc51575.png" alt="Аккумулятор EXIDE">
-                    <span class="part-badge wide">аккумуляторы</span>
-                  </a>
-                  <h3 class="part-name">Аккумулятор EXIDE</h3>
-                  <div class="part-divider"></div>
-                  <div class="part-footer">
-                    <span class="part-price">100 000 ₽</span>
-                    <a href="cart.php" class="add-to-cart small">
-                      <span class="cart-text">В КОРЗИНУ</span>
-                      <span class="cart-icon">
-                        <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
-                </article>
-              </div>
-              <div class="swiper-slide">
-                <article class="part-card">
-                  <a href="product.php" class="part-image">
-                    <img src="public/assets/8bfe66051b94080dd8cc17c697f3909bbbc51575.png" alt="Аккумулятор EXIDE">
-                    <span class="part-badge wide">аккумуляторы</span>
-                  </a>
-                  <h3 class="part-name">Аккумулятор EXIDE</h3>
-                  <div class="part-divider"></div>
-                  <div class="part-footer">
-                    <span class="part-price">100 000 ₽</span>
-                    <a href="cart.php" class="add-to-cart small">
-                      <span class="cart-text">В КОРЗИНУ</span>
-                      <span class="cart-icon">
-                        <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </span>
-                    </a>
-                  </div>
-                </article>
-              </div>
-            </div>
             </div>
             <button class="nav-arrow dark carousel-next swiper-button-next-new" aria-label="Следующий">
               <img src="public/assets/40d1d1338cfbab8ddf4ad4dcfe5360adb5cfb97c.svg" alt="" width="24" height="24">
@@ -705,7 +376,7 @@
               <br>
               Каждый продаваемый клиенту мотоцикл проходит контроль качества.
             </p>
-            <p class="about-slogan">
+            <p>
               Наш девиз READY TO HARD подразумевает готовность к любым эндуро испытаниям.
             </p>
           </div>

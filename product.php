@@ -40,21 +40,17 @@
             <div class="product-gallery">
               <div class="swiper gallery-swiper">
                 <div class="swiper-wrapper">
+                <?php foreach ([1,2,3] as $s): ?>
                   <div class="swiper-slide">
+	                  <div class="product-badges">
+		                  <span class="badge badge-new">новинка</span>
+		                  <span class="badge badge-hit">хит</span>
+	                  </div>
                     <div class="product-image-main">
                       <img src="public/assets/8bb77fd13eccde9b07be2e25a535ba4987f1869b.png" alt="AJERRA S8 NB300">
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="product-image-main">
-                      <img src="public/assets/8bb77fd13eccde9b07be2e25a535ba4987f1869b.png" alt="AJERRA S8 NB300">
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="product-image-main">
-                      <img src="public/assets/8bb77fd13eccde9b07be2e25a535ba4987f1869b.png" alt="AJERRA S8 NB300">
-                    </div>
-                  </div>
+                  <?php endforeach; ?>
                 </div>
               </div>
               <button class="gallery-nav prev swiper-button-prev-gallery" aria-label="Назад">
@@ -69,10 +65,7 @@
                   <path d="M26.6665 21.3333L37.3332 32L26.6665 42.6666" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
-              <div class="product-badges">
-                <span class="badge badge-new">новинка</span>
-                <span class="badge badge-hit">хит</span>
-              </div>
+
             </div>
 
             <!-- Right: Product Info -->
@@ -87,9 +80,9 @@
                       <path d="M4 12V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V12" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </button>
-                  <button class="icon-btn-top" aria-label="В избранное">
+                  <button class="icon-btn-top" id="btn-favourite" aria-label="В избранное">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2 9.50001C2.00002 8.38721 2.33759 7.30059 2.96813 6.38367C3.59867 5.46675 4.49252 4.76267 5.53161 4.36441C6.5707 3.96615 7.70616 3.89245 8.78801 4.15305C9.86987 4.41365 10.8472 4.99629 11.591 5.82401C11.6434 5.88002 11.7067 5.92468 11.7771 5.95521C11.8474 5.98574 11.9233 6.00149 12 6.00149C12.0767 6.00149 12.1526 5.98574 12.2229 5.95521C12.2933 5.92468 12.3566 5.88002 12.409 5.82401C13.1504 4.99091 14.128 4.40338 15.2116 4.13961C16.2952 3.87585 17.4335 3.94836 18.4749 4.34749C19.5163 4.74663 20.4114 5.45346 21.0411 6.37391C21.6708 7.29436 22.0053 8.38477 22 9.50001C22 11.79 20.5 13.5 19 15L13.508 20.313C13.3217 20.527 13.0919 20.6989 12.834 20.8173C12.5762 20.9357 12.296 20.9979 12.0123 20.9997C11.7285 21.0015 11.4476 20.9428 11.1883 20.8277C10.9289 20.7126 10.697 20.5436 10.508 20.332L5 15C3.5 13.5 2 11.8 2 9.50001Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path class="heart-path" d="M2 9.50001C2.00002 8.38721 2.33759 7.30059 2.96813 6.38367C3.59867 5.46675 4.49252 4.76267 5.53161 4.36441C6.5707 3.96615 7.70616 3.89245 8.78801 4.15305C9.86987 4.41365 10.8472 4.99629 11.591 5.82401C11.6434 5.88002 11.7067 5.92468 11.7771 5.95521C11.8474 5.98574 11.9233 6.00149 12 6.00149C12.0767 6.00149 12.1526 5.98574 12.2229 5.95521C12.2933 5.92468 12.3566 5.88002 12.409 5.82401C13.1504 4.99091 14.128 4.40338 15.2116 4.13961C16.2952 3.87585 17.4335 3.94836 18.4749 4.34749C19.5163 4.74663 20.4114 5.45346 21.0411 6.37391C21.6708 7.29436 22.0053 8.38477 22 9.50001C22 11.79 20.5 13.5 19 15L13.508 20.313C13.3217 20.527 13.0919 20.6989 12.834 20.8173C12.5762 20.9357 12.296 20.9979 12.0123 20.9997C11.7285 21.0015 11.4476 20.9428 11.1883 20.8277C10.9289 20.7126 10.697 20.5436 10.508 20.332L5 15C3.5 13.5 2 11.8 2 9.50001Z" stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                   </button>
                 </div>
@@ -163,7 +156,12 @@
                     <span>позвоните к нам</span>
                   </button>
                   <button class="help-btn">
-                    <img src="public/assets/6dcaf57b64202d573215989e790bee7b7e13c58b.svg" alt="" width="24" height="24">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22 10.5V6C22 5.46957 21.7893 4.96086 21.4142 4.58579C21.0391 4.21071 20.5304 4 20 4H4C3.46957 4 2.96086 4.21071 2.58579 4.58579C2.21071 4.96086 2 5.46957 2 6V18C2 19.1 2.9 20 4 20H16.5" stroke="#DDDDDD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M22 7L13.03 12.7C12.7213 12.8934 12.3643 12.996 12 12.996C11.6357 12.996 11.2787 12.8934 10.97 12.7L2 7" stroke="#DDDDDD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M18 15.28C18.2 14.88 18.5 14.48 18.9 14.28C19.3141 14.0406 19.7976 13.9497 20.2704 14.0225C20.7432 14.0952 21.177 14.3272 21.5 14.68C21.8 15.08 22 15.48 22 15.98C22 17.28 20 17.98 20 17.98" stroke="#DDDDDD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M20 22V22.01" stroke="#DDDDDD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                     <span>напишите нам</span>
                   </button>
                 </div>
@@ -281,6 +279,7 @@
           </button>
           <div class="swiper similar-swiper">
             <div class="swiper-wrapper">
+            <?php foreach ([1,2,3] as $s): ?>
               <div class="swiper-slide">
                 <article class="product-card">
                   <a href="product.php" class="product-image">
@@ -313,102 +312,7 @@
                   </div>
                 </article>
               </div>
-              <div class="swiper-slide">
-                <article class="product-card">
-                  <a href="product.php" class="product-image">
-                    <img src="public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png" alt="AJERRA S8 RL300">
-                  </a>
-                  <div class="product-info">
-                    <h3 class="product-name"><a href="product.php">AJERRA S8 RL300</a></h3>
-                    <p class="product-desc">Полноразмерный мотоцикл для продвинутых райдеров.</p>
-                    <div class="product-divider"></div>
-                    <div class="product-footer">
-                      <div class="product-prices">
-                        <span class="product-price">100000₽</span>
-                        <span class="product-price-old">140000₽</span>
-                      </div>
-                      <a href="cart.php" class="add-to-cart small">
-                        <span class="cart-text">В КОРЗИНУ</span>
-                        <span class="cart-icon">
-                          <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="swiper-slide">
-                <article class="product-card">
-                  <a href="product.php" class="product-image">
-                    <img src="public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png" alt="AJERRA S8 RL300">
-                  </a>
-                  <div class="product-info">
-                    <h3 class="product-name"><a href="product.php">AJERRA S8 RL300</a></h3>
-                    <p class="product-desc">Полноразмерный мотоцикл для продвинутых райдеров.</p>
-                    <div class="product-divider"></div>
-                    <div class="product-footer">
-                      <div class="product-prices">
-                        <span class="product-price">100000₽</span>
-                        <span class="product-price-old">140000₽</span>
-                      </div>
-                      <a href="cart.php" class="add-to-cart small">
-                        <span class="cart-text">В КОРЗИНУ</span>
-                        <span class="cart-icon">
-                          <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="swiper-slide">
-                <article class="product-card">
-                  <a href="product.php" class="product-image">
-                    <img src="public/assets/fd4519b15bdbd14029df9c2b6672d950ae7f9e17.png" alt="AJERRA S8 RL300">
-                  </a>
-                  <div class="product-info">
-                    <h3 class="product-name"><a href="product.php">AJERRA S8 RL300</a></h3>
-                    <p class="product-desc">Полноразмерный мотоцикл для продвинутых райдеров.</p>
-                    <div class="product-divider"></div>
-                    <div class="product-footer">
-                      <div class="product-prices">
-                        <span class="product-price">100000₽</span>
-                        <span class="product-price-old">140000₽</span>
-                      </div>
-                      <a href="cart.php" class="add-to-cart small">
-                        <span class="cart-text">В КОРЗИНУ</span>
-                        <span class="cart-icon">
-                          <svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.25 8.25L10.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14.25 8.25L11.25 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M1.5 8.25H16.5" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2.625 8.25L3.825 13.8C3.89513 14.1439 4.08364 14.4523 4.35771 14.6716C4.63179 14.8909 4.97408 15.0071 5.325 15H12.675C13.0259 15.0071 13.3682 14.8909 13.6423 14.6716C13.9164 14.4523 14.1049 14.1439 14.175 13.8L15.45 8.25" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M3.375 11.625H14.625" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M3.75 8.25L6.75 3" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M6.75 8.25L7.5 15" stroke="#404040" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              </div>
+              <?php endforeach; ?>
             </div>
           </div>
           <button class="nav-arrow carousel-next swiper-button-next-similar" aria-label="Следующий">
@@ -472,6 +376,31 @@
         }
       }
     });
+
+    // Favourite Toggle
+    const btnFavourite = document.getElementById('btn-favourite');
+    const wishlistCount = document.getElementById('wishlist-count');
+    let isFavourite = false;
+
+    if (btnFavourite && wishlistCount) {
+      btnFavourite.addEventListener('click', () => {
+        isFavourite = !isFavourite;
+        const heartPath = btnFavourite.querySelector('.heart-path');
+        let count = parseInt(wishlistCount.textContent) || 0;
+
+        if (isFavourite) {
+          heartPath.setAttribute('fill', '#FEB05D');
+          heartPath.setAttribute('stroke', '#FEB05D');
+          count++;
+        } else {
+          heartPath.setAttribute('fill', 'none');
+          heartPath.setAttribute('stroke', '#AAAAAA');
+          count--;
+        }
+
+        wishlistCount.textContent = count;
+      });
+    }
   </script>
 </body>
 </html>

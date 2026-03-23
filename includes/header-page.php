@@ -35,7 +35,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M2 9.5C2.00002 8.3872 2.33759 7.30058 2.96813 6.38366C3.59867 5.46674 4.49252 4.76266 5.53161 4.3644C6.5707 3.96614 7.70616 3.89244 8.78801 4.15304C9.86987 4.41364 10.8472 4.99628 11.591 5.824C11.6434 5.88001 11.7067 5.92467 11.7771 5.9552C11.8474 5.98573 11.9233 6.00148 12 6.00148C12.0767 6.00148 12.1526 5.98573 12.2229 5.9552C12.2933 5.92467 12.3566 5.88001 12.409 5.824C13.1504 4.9909 14.128 4.40337 15.2116 4.1396C16.2952 3.87584 17.4335 3.94835 18.4749 4.34748C19.5163 4.74662 20.4114 5.45345 21.0411 6.3739C21.6708 7.29435 22.0053 8.38476 22 9.5C22 11.79 20.5 13.5 19 15L13.508 20.313C13.3217 20.527 13.0919 20.6989 12.834 20.8173C12.5762 20.9357 12.296 20.9978 12.0123 20.9996C11.7285 21.0014 11.4476 20.9428 11.1883 20.8277C10.9289 20.7126 10.697 20.5436 10.508 20.332L5 15C3.5 13.5 2 11.8 2 9.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <span class="cart-badge">5</span>
+        <span class="cart-badge" id="wishlist-count">5</span>
       </button>
       <a href="cart.php" class="icon-btn icon-btn-cart" aria-label="Корзина">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,23 +64,25 @@
 <!-- Mobile Menu Panel -->
 <nav class="mobile-menu" id="mobile-menu">
   <div class="mobile-menu-content">
-    <div class="mobile-menu-section">
-      <a href="index.php#models" class="mobile-menu-link">Модели</a>
-      <a href="category.php" class="mobile-menu-link">Запчасти</a>
+    <a href="index.php#models" class="mobile-menu-link">Модели</a>
+    <div class="mobile-menu-item">
+      <button class="mobile-menu-link mobile-menu-toggle" aria-expanded="false">
+        Запчасти
+        <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+        <svg class="chevron-up" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+      </button>
+      <div class="mobile-menu-subcategories">
+        <a href="#" class="mobile-menu-sublink">Мотоциклы</a>
+        <a href="#" class="mobile-menu-sublink">Экипировка</a>
+        <a href="#" class="mobile-menu-sublink">Шины</a>
+        <a href="#" class="mobile-menu-sublink">Еще что-то</a>
+        <a href="#" class="mobile-menu-sublink">Тюнинг</a>
+        <a href="#" class="mobile-menu-sublink">Аксессуары</a>
+        <a href="#" class="mobile-menu-sublink">Химия</a>
+      </div>
     </div>
-    <div class="mobile-menu-subcategories">
-      <a href="#" class="mobile-menu-sublink">Мотоциклы</a>
-      <a href="#" class="mobile-menu-sublink">Экипировка</a>
-      <a href="#" class="mobile-menu-sublink">Шины</a>
-      <a href="#" class="mobile-menu-sublink">Еще что-то</a>
-      <a href="#" class="mobile-menu-sublink">Тюнинг</a>
-      <a href="#" class="mobile-menu-sublink">Аксессуары</a>
-      <a href="#" class="mobile-menu-sublink">Химия</a>
-    </div>
-    <div class="mobile-menu-section mobile-menu-section-bottom">
-      <a href="#" class="mobile-menu-link">Туры</a>
-      <a href="index.php#about" class="mobile-menu-link">О нас</a>
-      <a href="index.php#contacts" class="mobile-menu-link">Контакты</a>
-    </div>
+    <a href="#" class="mobile-menu-link">Туры</a>
+    <a href="index.php#about" class="mobile-menu-link">О нас</a>
+    <a href="index.php#contacts" class="mobile-menu-link">Контакты</a>
   </div>
 </nav>

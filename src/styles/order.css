@@ -3,41 +3,13 @@
    ============================================ */
 
 .order-section {
-  padding-top: 80px;
+  padding-top: 20px;
   padding-bottom: var(--space-4xl);
 }
 
-/* Breadcrumbs (reused from cart) */
+/* Breadcrumbs - page-specific adjustments */
 .breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   margin-bottom: 12px;
-}
-
-.breadcrumb-link {
-  font-size: 14px;
-  color: #777;
-  transition: color var(--transition-fast);
-}
-
-.breadcrumb-link:hover {
-  color: var(--color-text);
-}
-
-.breadcrumb-current {
-  font-size: 14px;
-  color: var(--color-text);
-}
-
-.breadcrumb-arrow {
-  opacity: 0.5;
-}
-
-.breadcrumb-divider {
-  height: 1px;
-  background: #E5E5E5;
-  margin-bottom: var(--space-xl);
 }
 
 /* Order Content Layout */
@@ -67,7 +39,7 @@
 .order-block {
   border: 1px solid #DDD;
   border-radius: var(--radius-sm);
-  padding: var(--space-lg);
+  padding: 20px var(--space-lg);
   margin-bottom: var(--space-lg);
 }
 
@@ -79,14 +51,14 @@
   font-size: 16px;
   font-weight: 500;
   color: var(--color-text);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 /* Form Elements */
 .order-form-row {
   display: flex;
   gap: var(--space-lg);
-  margin-bottom: var(--space-lg);
+  margin-bottom: 12px;
 }
 
 .order-form-row:last-child {
@@ -160,14 +132,13 @@
 .form-note {
   font-size: 14px;
   color: var(--color-text-muted);
-  margin-top: var(--space-md);
   margin-bottom: 0;
 }
 
 /* Radio Group */
 .radio-group {
   display: flex;
-  gap: 140px;
+  gap: 40px;
   margin-bottom: var(--space-lg);
 }
 
@@ -237,28 +208,11 @@
   gap: 16px;
 }
 
-.summary-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.summary-label {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--color-text);
-}
-
-.summary-total {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--color-text);
-}
+/* summary-row, summary-label, summary-total - now in main.css */
 
 .summary-details {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 4px;
   text-align: right;
 }
@@ -272,16 +226,20 @@
 
 .summary-item-label {
   color: var(--color-text-muted);
+  background: #F7F7F7;
+  position: relative;
+  z-index: 1;
 }
 
 .summary-item-value {
   color: var(--color-text);
+  background: #F7F7F7;
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
 }
 
-.summary-divider {
-  height: 1px;
-  background: #E5E5E5;
-}
+/* summary-divider - now in main.css */
 
 .summary-toggles {
   display: flex;
@@ -351,7 +309,7 @@
    ============================================ */
 
 .order-success-section {
-  padding-top: 80px;
+  padding-top: 20px;
   padding-bottom: var(--space-4xl);
 }
 
@@ -363,7 +321,7 @@
   background: var(--color-card);
   border-radius: var(--radius-md);
   padding: var(--space-4xl) var(--space-xl);
-  min-height: 860px;
+  min-height: 600px;
 }
 
 .order-success-image {
@@ -405,16 +363,12 @@
    ============================================ */
 
 @media (max-width: 1200px) {
-  .order-content {
-    flex-direction: column;
-  }
-
+  
   .order-main {
     max-width: 100%;
   }
 
   .order-summary {
-    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -423,17 +377,25 @@
 
   .summary-row {
     flex: 1;
+    width: 100%;
   }
 
+  
+  .summary-item {
+    gap: 1rem;
+    justify-content: space-between;
+    width: 100%;
+  }
   .summary-details {
-    flex-direction: row;
     gap: 24px;
+    width: 100%;
   }
 
   .summary-toggles {
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 16px;
+    width: 100%;
   }
 
   .toggle-label {
@@ -446,12 +408,30 @@
     flex: 1;
     min-width: 200px;
   }
+      
+
+  .order-form-row {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .order-content {
+    flex-direction: column;
+  }
+
+  .order-summary {
+      width: 100%;
+  }
+
+  
 }
 
 @media (max-width: 768px) {
   .order-section,
   .order-success-section {
-    padding-top: 70px;
+    padding-top: 30px;
     padding-bottom: var(--space-3xl);
   }
 
@@ -463,6 +443,12 @@
   .order-title {
     font-size: 18px;
     margin-bottom: var(--space-lg);
+  }
+
+  .summary-details {
+    align-items: flex-start;
+  flex-direction: column;
+  gap: 0;
   }
 
   .order-block {
@@ -492,8 +478,10 @@
   .summary-details {
     width: 100%;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
   }
 
   .summary-toggles {
@@ -505,7 +493,6 @@
   .toggle-label {
     width: 100%;
     flex-direction: row-reverse;
-    justify-content: space-between;
   }
 
   .btn-submit {

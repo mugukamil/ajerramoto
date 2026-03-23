@@ -71,8 +71,6 @@
                 </button>
               </div>
 
-              <div class="cart-item-divider"></div>
-
               <!-- Cart Item 2 -->
               <div class="cart-item">
                 <div class="cart-item-image">
@@ -110,8 +108,6 @@
                 </button>
               </div>
 
-              <div class="cart-item-divider"></div>
-
               <!-- Cart Item 3 -->
               <div class="cart-item">
                 <div class="cart-item-image">
@@ -143,8 +139,6 @@
                   </svg>
                 </button>
               </div>
-
-              <div class="cart-item-divider"></div>
 
               <!-- Cart Item 4 -->
               <div class="cart-item">
@@ -182,8 +176,6 @@
                   </svg>
                 </button>
               </div>
-
-              <div class="cart-item-divider"></div>
 
               <!-- Cart Item 5 -->
               <div class="cart-item">
@@ -328,12 +320,7 @@
     document.querySelectorAll('.cart-item-delete').forEach(btn => {
       btn.addEventListener('click', function() {
         const item = this.closest('.cart-item');
-        const divider = item.nextElementSibling;
         item.remove();
-        if (divider && divider.classList.contains('cart-item-divider')) {
-          divider.remove();
-        }
-
         // Check if cart is empty
         const items = document.querySelectorAll('.cart-item');
         if (items.length === 0) {

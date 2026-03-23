@@ -38,16 +38,16 @@
               <h2 class="order-block-title">Покупатель</h2>
               <div class="order-form-row">
                 <div class="form-group">
-                  <label class="form-label">Ф.И.О <span class="required">*</span></label>
-                  <input type="text" class="form-input" placeholder="Введите ваше Ф.И.О">
+                  <label class="form-label" for="fio">Ф.И.О <span class="required">*</span></label>
+                  <input type="text" id="fio" class="form-input" placeholder="Введите ваше Ф.И.О">
                 </div>
                 <div class="form-group">
-                  <label class="form-label">Email <span class="required">*</span></label>
-                  <input type="email" class="form-input" placeholder="Введите ваш email">
+                  <label class="form-label" for="email">Email <span class="required">*</span></label>
+                  <input type="email" id="email" class="form-input" placeholder="Введите ваш email">
                 </div>
                 <div class="form-group">
-                  <label class="form-label">Телефон <span class="required">*</span></label>
-                  <input type="tel" class="form-input" placeholder="Введите ваш телефон">
+                  <label class="form-label" for="phone">Телефон <span class="required">*</span></label>
+                  <input type="tel" id="phone" class="form-input" placeholder="Введите ваш телефон">
                 </div>
               </div>
               <p class="form-note"><span class="required">*</span> – обязательные поля</p>
@@ -71,17 +71,17 @@
               <div class="order-divider"></div>
               <div class="order-form-row delivery-form">
                 <div class="form-group">
-                  <label class="form-label">Адрес доставки <span class="required">*</span></label>
-                  <input type="text" class="form-input" placeholder="Введите ваш адрес">
+                  <label class="form-label" for="address">Адрес доставки <span class="required">*</span></label>
+                  <input type="text" id="address" class="form-input" placeholder="Введите ваш адрес">
                 </div>
                 <div class="form-group">
-                  <label class="form-label">Индекс <span class="required">*</span></label>
-                  <input type="text" class="form-input" placeholder="Введите ваш индекс">
+                  <label class="form-label" for="zip">Индекс <span class="required">*</span></label>
+                  <input type="text" id="zip" class="form-input" placeholder="Введите ваш индекс">
                 </div>
               </div>
               <div class="form-group form-group-full">
-                <label class="form-label">Комментарий к заказу</label>
-                <textarea class="form-textarea" placeholder="Введите ваш комментарий"></textarea>
+                <label class="form-label" for="comment">Комментарий к заказу</label>
+                <textarea id="comment" class="form-textarea" placeholder="Введите ваш комментарий"></textarea>
               </div>
               <p class="form-note"><span class="required">*</span> – обязательные поля</p>
             </div>
@@ -89,7 +89,7 @@
             <!-- Payment -->
             <div class="order-block">
               <h2 class="order-block-title">Оплата</h2>
-              <div class="radio-group">
+              <div class="radio-group mb-0">
                 <label class="radio-label">
                   <input type="radio" name="payment" checked>
                   <span class="radio-icon-unchecked"></span>

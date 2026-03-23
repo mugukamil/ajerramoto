@@ -117,4 +117,19 @@
   mobileMenuLinks.forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
+
+  // Mobile submenu toggle (Запчасти expand/collapse)
+  const submenuToggleBtn = document.querySelector('.mobile-menu-toggle');
+  const subcategories = document.querySelector('.mobile-menu-subcategories');
+
+  if (submenuToggleBtn && subcategories && mobileMenu) {
+    submenuToggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isExpanded = submenuToggleBtn.getAttribute('aria-expanded') === 'true';
+      submenuToggleBtn.setAttribute('aria-expanded', !isExpanded);
+      subcategories.style.display = isExpanded ? 'none' : 'flex';
+      mobileMenu.classList.toggle('submenu-open', !isExpanded);
+    });
+  }
 </script>
